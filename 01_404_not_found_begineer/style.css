@@ -1,0 +1,151 @@
+/* font-family: 'Inconsolata', monospace;
+font-family: 'Space Mono', monospace; */
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  /* overflow: hidden; */
+}
+
+.header {
+  margin-left: 77px;
+  margin-top: 40px;
+}
+
+.header > h3 {
+  font-size: 24px;
+  font-family: "Inconsolata", monospace;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Main */
+.container {
+  align-self: center;
+  width: 70%;
+  display: flex;
+  padding: 5rem;
+  margin-top: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image */
+.image {
+  margin-right: 4rem;
+}
+
+.image img {
+  width: 540px;
+  height: 415px;
+}
+
+/* Text */
+.info {
+  margin-left: 2rem;
+}
+
+.info h3,
+.info p,
+.info a {
+  font-family: "Space Mono", monospace;
+}
+
+.info h3 {
+  font-weight: 700;
+  font-size: 64px;
+  margin-bottom: 2rem;
+}
+
+.info p {
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 2rem;
+}
+
+.info a {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.info a:hover,
+.info a:visited {
+  color: #fff;
+  background-color: #111;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 1rem;
+  background-color: #bbb;
+}
+
+.footer p {
+  font-family: "Montserrat";
+  color: #333;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 1500px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1250px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    padding: 3rem;
+  }
+  .info h3 {
+    font-size: 48px;
+  }
+  .info p {
+    font-size: 18px;
+  }
+  .image img {
+    width: 440px;
+    height: 315px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
