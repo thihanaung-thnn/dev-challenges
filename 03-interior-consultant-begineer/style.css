@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500;700&family=Montserrat&display=swap");
+/* 
+font-family: 'Crimson Pro', serif;
+font-family: 'Lora', serif;
+font-family: 'Montserrat', sans-serif;
+*/
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #181719;
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 4.2rem 15rem 3rem 15rem;
+}
+
+.navbar .logo p {
+  font-family: "Crimson Pro", serif;
+  font-weight: 200;
+  font-size: 1.4rem;
+  padding: 0.8rem;
+  border: 1px solid #fff;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-items {
+  list-style-type: none;
+  margin-left: 8.6rem;
+}
+
+.nav-links {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 0.8rem;
+}
+
+.nav-links.active,
+.nav-links:hover {
+  position: inline;
+  border-bottom: 2px solid #fff;
+}
+
+/* navbar buttons */
+.open-menu {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 3rem;
+  height: 2rem;
+}
+
+.open-menu .bar {
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.close-menu {
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+  display: none;
+  color: #fff;
+  font-size: 5rem;
+  cursor: pointer;
+}
+
+/* Main */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4.2rem 15rem 3rem 15rem;
+}
+
+/* Left side  */
+
+.container .left {
+  flex: 4;
+}
+
+.left h1 {
+  font-family: "Lora", serif;
+  font-size: 4.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.left p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin-bottom: 5rem;
+}
+
+.left a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem;
+}
+
+.left a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+/* Right Side */
+
+.container .right {
+  flex: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+}
+
+.right .bg-image {
+  width: 85%;
+}
+
+.right .user-section {
+  position: absolute;
+  bottom: -15%;
+  right: 10%;
+  width: 40%;
+  padding: 1rem;
+  background-color: #181719;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.user-profile {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.user-profile img {
+  width: 25%;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.user-info {
+  margin-left: 2rem;
+}
+
+.user-name,
+.job-title {
+  font-family: "Montserrat", serif;
+  font-weight: 500;
+}
+
+.user-name {
+  font-size: 1.4rem;
+}
+
+.job-title {
+  font-size: 1.2rem;
+}
+
+.title-text {
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+}
+.title-text p {
+  font-family: "Lora", serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 2.4rem;
+}
+
+.footer p {
+  font-family: "Montserrat", serif;
+  color: #aaa;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 1200px) {
+  .right .user-section {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .navbar {
+    margin: 4.2rem 5rem 10rem 5rem;
+  }
+
+  .container {
+    margin: 4.2rem 5rem 3rem 5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    font-size: 50%;
+  }
+
+  .navbar {
+    margin-bottom: 3rem;
+  }
+  /* change navbar to collapse */
+
+  .nav-menu {
+    line-height: 10rem;
+    height: 100vh;
+    position: fixed;
+    top: 0%;
+    right: 0;
+    left: -15%;
+    background-color: blue;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.95);
+    transition: all 0.5s ease;
+  }
+
+  .close-menu {
+    /* display: block; */
+    z-index: 2;
+  }
+
+  .open-menu {
+    display: flex;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left {
+    margin-bottom: 7rem;
+  }
+
+  .right {
+    margin-bottom: 7rem;
+  }
+
+  .right .bg-image {
+    width: 100%;
+  }
+
+  .right .user-section {
+    width: 70%;
+    padding-left: 3rem;
+  }
+}
